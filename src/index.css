@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Cinzel', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-gold-400: #e2c792;
+  --color-gold-500: #c5a880;
+  --color-gold-600: #9e7f57;
+  --color-gold-700: #7b5f3b;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+/* Subtle architectural grid background */
+.bg-financial-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.bg-radial-subtle {
+  background: radial-gradient(circle at 50% 0%, rgba(197, 168, 128, 0.07) 0%, transparent 60%);
+}
+
+.bg-radial-blue {
+  background: radial-gradient(circle at 80% 20%, rgba(30, 58, 138, 0.12) 0%, transparent 50%);
+}
+
+/* Tombstone styled border with subtle metallic sheen */
+.tombstone-frame {
+  position: relative;
+  background: linear-gradient(180deg, rgba(26, 26, 31, 0.85) 0%, rgba(12, 12, 16, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+}
+
+.tombstone-frame:hover {
+  border-color: rgba(197, 168, 128, 0.35);
+  box-shadow: 0 25px 50px -12px rgba(197, 168, 128, 0.08);
+}
+
+/* Custom delicate scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08080a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
